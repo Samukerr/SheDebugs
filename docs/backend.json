@@ -1,0 +1,64 @@
+{
+  "entities": {
+    "chatMessage": {
+      "title": "Chat Message",
+      "description": "A single message in a live chat conversation.",
+      "type": "object",
+      "properties": {
+        "role": {
+          "type": "string",
+          "enum": ["user", "assistant"],
+          "description": "The role of the message sender."
+        },
+        "content": {
+          "type": "string",
+          "description": "The text content of the message."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp when the message was created."
+        }
+      },
+      "required": ["role", "content", "createdAt"]
+    },
+    "serviceRecommendation": {
+      "title": "Service Recommendation",
+      "description": "An AI-generated service recommendation for a client.",
+      "type": "object",
+      "properties": {
+        "businessProfile": {
+          "type": "string",
+          "description": "The client's business profile."
+        },
+        "recommendedPackage": {
+          "type": "string",
+          "description": "The service package recommended by the AI."
+        },
+        "justification": {
+          "type": "string",
+          "description": "The AI's justification for the recommendation."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp when the recommendation was created."
+        }
+      },
+      "required": ["businessProfile", "recommendedPackage", "justification", "createdAt"]
+    }
+  },
+  "auth": {
+    "providers": ["anonymous"]
+  },
+  "firestore": {
+    "/chats/{chatId}/messages/{messageId}": {
+      "schema": { "$ref": "#/entities/chatMessage" },
+      "description": "Stores individual messages within a chat session."
+    },
+    "/recommendations/{recommendationId}": {
+      "schema": { "$ref": "#/entities/serviceRecommendation" },
+      "description": "Stores AI-generated service recommendations."
+    }
+  }
+}

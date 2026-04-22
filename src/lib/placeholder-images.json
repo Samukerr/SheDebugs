@@ -1,0 +1,40 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract network of nodes and connections on a dark background.",
+      "imageUrl": "https://images.unsplash.com/photo-1738082956213-aa554ba67bda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMG5ldHdvcmt8ZW58MHx8fHwxNzY4NDkzNDUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract network"
+    },
+    {
+      "id": "about-us-image",
+      "description": "A diverse team of developers collaborating in a modern office.",
+      "imageUrl": "https://images.unsplash.com/photo-1622675363311-3e1904dc1885?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3Njg1MzY1NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team collaboration"
+    },
+    {
+      "id": "portfolio-project-3",
+      "description": "Complex data visualization from a business intelligence software.",
+      "imageUrl": "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3Njg1MTUwOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data visualization"
+    },
+    {
+      "id": "portfolio-project-4",
+      "description": "A sleek landing page for a SaaS product.",
+      "imageUrl": "https://images.unsplash.com/photo-1625315642929-3774ba1d1af4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsYW5kaW5nJTIwcGFnZXxlbnwwfHx8fDE3Njg1NTcyMzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "landing page"
+    },
+    {
+      "id": "portfolio-project-5",
+      "description": "A modern and clean portfolio website layout.",
+      "imageUrl": "https://images.unsplash.com/photo-1642132652860-471b4228023e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3J0Zm9saW8lMjB3ZWJzaXRlfGVufDB8fHx8MTc2ODQ5MzUxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portfolio website"
+    },
+    {
+      "id": "portfolio-project-6",
+      "description": "An industrial refrigeration unit.",
+      "imageUrl": "https://images.unsplash.com/photo-1767554261707-db55a5cbdd76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxpbmR1c3RyaWFsJTIwcmVmcmlnZXJhdGlvbnxlbnwwfHx8fDE3Njg1NzY3MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "industrial refrigeration"
+    }
+  ]
+}
