@@ -3,7 +3,7 @@ import { ArrowRight, Handshake, Code2, Rocket, GraduationCap } from 'lucide-reac
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-zinc-800">
+    <div className="min-h-screen bg-zinc-950 text-zinc-50 font-poppins selection:bg-zinc-800">
       
       {/* Navbar */}
       <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md">
@@ -30,7 +30,7 @@ export default function LandingPage() {
             Learn More about SheDebugs <ArrowRight size={14} />
           </a>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-500">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-transparent bg-clip-text bg-linear-to-b from-white to-zinc-500">
             Where Technology Meets Opportunity.
           </h1>
           
@@ -40,7 +40,7 @@ export default function LandingPage() {
           
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <button className="px-8 py-3 rounded-md bg-white text-zinc-950 font-medium hover:bg-zinc-200 transition-colors">
-              Get Started
+              I'm a Graduate
             </button>
             <button className="px-8 py-3 rounded-md bg-zinc-900 border border-zinc-800 text-white font-medium hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2">
                Become a Partner
@@ -73,14 +73,14 @@ export default function LandingPage() {
             {/* Card 1 */}
             <div className="p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 flex flex-col h-full">
               <GraduationCap className="mb-4 text-emerald-400" size={32} />
-              <h3 className="text-xl font-semibold mb-2">Skills Brokering</h3>
+              <h3 className="text-xl font-semibold mb-2">Connecting Talent with Opportunity</h3>
               <p className="text-zinc-400">Connecting graduates with internships, learnerships, and employment opportunities through strategic employer partnerships.</p>
             </div>
             
             {/* Card 2 */}
             <div className="p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 flex flex-col h-full md:col-span-2">
               <Code2 className="mb-4 text-blue-400" size={32} />
-              <h3 className="text-xl font-semibold mb-2">Custom Software Development</h3>
+              <h3 className="text-xl font-semibold mb-2">Build Digital Solutions That Scale</h3>
               <p className="text-zinc-400 max-w-md">We design and develop scalableweb applications, business systems, and digital platforms tailored to your organisation's needs.</p>
             </div>
 
