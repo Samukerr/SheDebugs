@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Handshake, Code2, Rocket, GraduationCap } from 'lucide-react';
+import Navbar from "../components/Navbar"
 
 export default function LandingPage() {
   return (
@@ -9,14 +10,6 @@ export default function LandingPage() {
       <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
           <div className="font-bold text-xl tracking-tight">SheDebugs</div>
-          <nav className="hidden md:flex gap-6 text-sm text-zinc-400">
-            <a href="#" className="hover:text-white transition-colors">About Us</a>
-            <a href="#" className="hover:text-white transition-colors">Services</a>
-            <a href="/login" className="hover:text-white transition-colors">Register/Login</a>
-            <a href="#" className="hover:text-white transition-colors">Partnership</a>
-            <a href="#" className="hover:text-white transition-colors">Contact</a>
-            
-          </nav>
           <div className="flex gap-4">
             <button className="text-zinc-400 hover:text-white"></button>
           </div>
