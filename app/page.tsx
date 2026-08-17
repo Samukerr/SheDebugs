@@ -12,7 +12,7 @@ export default function LandingPage() {
           <nav className="hidden md:flex gap-6 text-sm text-zinc-400">
             <a href="#" className="hover:text-white transition-colors">About Us</a>
             <a href="#" className="hover:text-white transition-colors">Services</a>
-            <a href="#" className="hover:text-white transition-colors">Register/Login</a>
+            <a href="/login" className="hover:text-white transition-colors">Register/Login</a>
             <a href="#" className="hover:text-white transition-colors">Partnership</a>
             <a href="#" className="hover:text-white transition-colors">Contact</a>
             
