@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,158 +12,122 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-[#1f1f21] bg-[#080808]/95 backdrop-blur-md">
-      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-md">
+      <div className="container mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
 
-        {/* Logo */}
-        <Link
-          href="/"
-          onClick={closeMenu}
-          className="text-xl font-bold tracking-tight text-white"
-        >
-          She<span className="text-[#00D084]">Debugs</span>
-        </Link>
-
-        {/* Desktop Navigation */}
-        <div className="hidden items-center gap-8 md:flex">
-
+          {/* Logo */}
           <Link
-            href="#about"
-            className="text-sm text-[#929292] transition hover:text-white"
+            href="/"
+            onClick={closeMenu}
+            className="text-xl font-bold tracking-tight text-white"
           >
-            About Us
+            SheDebugs
           </Link>
 
-          <Link
-            href="#services"
-            className="text-sm text-[#929292] transition hover:text-white"
-          >
-            Services
-          </Link>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-6 text-sm text-zinc-400">
+            <Link
+              href="/#about"
+              className="transition-colors hover:text-white"
+            >
+              About Us
+            </Link>
 
-          <Link
-            href="/login"
-            className="text-sm text-[#929292] transition hover:text-white"
-          >
-            Register/Login
-          </Link>
+            <Link
+              href="/#services"
+              className="transition-colors hover:text-white"
+            >
+              Services
+            </Link>
 
-          <Link
-            href="#partnership"
-            className="text-sm text-[#929292] transition hover:text-white"
-          >
-            Partnership
-          </Link>
+            <Link
+              href="/register"
+              className="transition-colors hover:text-white"
+            >
+              Register/Login
+            </Link>
 
-          <Link
-            href="#contact"
-            className="text-sm text-[#929292] transition hover:text-white"
-          >
-            Contact
-          </Link>
+            <Link
+              href="/#partnership"
+              className="transition-colors hover:text-white"
+            >
+              Partnership
+            </Link>
 
+            <Link
+              href="/#contact"
+              className="transition-colors hover:text-white"
+            >
+              Contact
+            </Link>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-zinc-300 hover:text-white transition-colors"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? (
+              <X size={26} />
+            ) : (
+              <Menu size={26} />
+            )}
+          </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          type="button"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#29292c] bg-[#111113] text-white transition hover:border-[#00D084] md:hidden"
-        >
-          {isOpen ? (
-            /* X icon */
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="21"
-              height="21"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M18 6 6 18" />
-              <path d="m6 6 12 12" />
-            </svg>
-          ) : (
-            /* Hamburger icon */
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="21"
-              height="21"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-          )}
-        </button>
-
-      </nav>
-
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="border-t border-[#1f1f21] bg-[#080808] md:hidden">
-
-          <div className="mx-auto max-w-7xl px-6 py-5">
-
-            <div className="flex flex-col">
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <nav className="md:hidden mt-4 border-t border-zinc-800 pt-4 pb-2">
+            <div className="flex flex-col gap-1">
 
               <Link
-                href="#about"
+                href="/#about"
                 onClick={closeMenu}
-                className="border-b border-[#1f1f21] py-4 text-sm text-[#b0b0b0] transition hover:text-[#00D084]"
+                className="px-3 py-3 text-sm text-zinc-400 rounded-lg transition-colors hover:bg-zinc-900 hover:text-white"
               >
                 About Us
               </Link>
 
               <Link
-                href="#services"
+                href="/#services"
                 onClick={closeMenu}
-                className="border-b border-[#1f1f21] py-4 text-sm text-[#b0b0b0] transition hover:text-[#00D084]"
+                className="px-3 py-3 text-sm text-zinc-400 rounded-lg transition-colors hover:bg-zinc-900 hover:text-white"
               >
                 Services
               </Link>
 
               <Link
-                href="/login"
+                href="/register"
                 onClick={closeMenu}
-                className="border-b border-[#1f1f21] py-4 text-sm text-[#b0b0b0] transition hover:text-[#00D084]"
+                className="px-3 py-3 text-sm text-zinc-400 rounded-lg transition-colors hover:bg-zinc-900 hover:text-white"
               >
-                Register/Login
+                Register / Login
               </Link>
 
               <Link
-                href="#partnership"
+                href="/#partnership"
                 onClick={closeMenu}
-                className="border-b border-[#1f1f21] py-4 text-sm text-[#b0b0b0] transition hover:text-[#00D084]"
+                className="px-3 py-3 text-sm text-zinc-400 rounded-lg transition-colors hover:bg-zinc-900 hover:text-white"
               >
                 Partnership
               </Link>
 
               <Link
-                href="#contact"
+                href="/#contact"
                 onClick={closeMenu}
-                className="py-4 text-sm text-[#b0b0b0] transition hover:text-[#00D084]"
+                className="px-3 py-3 text-sm text-zinc-400 rounded-lg transition-colors hover:bg-zinc-900 hover:text-white"
               >
                 Contact
               </Link>
 
             </div>
-
-          </div>
-
-        </div>
-      )}
+          </nav>
+        )}
+      </div>
     </header>
   );
 }

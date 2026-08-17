@@ -11,6 +11,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
           <div className="font-bold text-xl tracking-tight">SheDebugs</div>
           <div className="flex gap-4">
+          
             <button className="text-zinc-400 hover:text-white"></button>
           </div>
         </div>
@@ -19,7 +20,7 @@ export default function LandingPage() {
       <main className="container mx-auto px-6">
         
         {/* Hero Section */}
-        <section className="py-24 md:py-32 flex flex-col items-center text-center max-w-4xl mx-auto">
+        <section className="py-32 md:py-32 flex flex-col items-center text-center max-w-4xl mx-auto">
           <a href="#" className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-sm text-zinc-300 hover:bg-zinc-800 transition-colors mb-8">
             <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
             Learn More about SheDebugs <ArrowRight size={14} />
