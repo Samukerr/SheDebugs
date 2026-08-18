@@ -12,122 +12,116 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-md">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+    <header className="sticky top-0 z-50 w-full border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        
+        {/* Logo */}
+        <Link
+          href="/"
+          onClick={closeMenu}
+          className="text-xl font-bold tracking-tight text-white"
+        >
+          She<span className="text-zinc-300">Debugs</span>
+        </Link>
 
-          {/* Logo */}
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-7 text-sm text-zinc-400 md:flex">
           <Link
-            href="/"
-            onClick={closeMenu}
-            className="text-xl font-bold tracking-tight text-white"
+            href="#about"
+            className="transition-colors hover:text-white"
           >
-            SheDebugs
+            About Us
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6 text-sm text-zinc-400">
+          <Link
+            href="#services"
+            className="transition-colors hover:text-white"
+          >
+            Services
+          </Link>
+
+          <Link
+            href="/register"
+            className="transition-colors hover:text-white"
+          >
+            Register/Login
+          </Link>
+
+          <Link
+            href="#partnership"
+            className="transition-colors hover:text-white"
+          >
+            Partnership
+          </Link>
+
+          <Link
+            href="#contact"
+            className="transition-colors hover:text-white"
+          >
+            Contact
+          </Link>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className="rounded-md p-2 text-zinc-400 transition hover:bg-zinc-900 hover:text-white md:hidden"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="border-t border-zinc-800 bg-zinc-950 md:hidden">
+          <nav className="mx-auto flex max-w-7xl flex-col px-6 py-4">
+            
             <Link
-              href="/#about"
-              className="transition-colors hover:text-white"
+              href="#about"
+              onClick={closeMenu}
+              className="border-b border-zinc-900 py-4 text-sm text-zinc-400 transition-colors hover:text-white"
             >
               About Us
             </Link>
 
             <Link
-              href="/#services"
-              className="transition-colors hover:text-white"
+              href="#services"
+              onClick={closeMenu}
+              className="border-b border-zinc-900 py-4 text-sm text-zinc-400 transition-colors hover:text-white"
             >
               Services
             </Link>
 
             <Link
               href="/register"
-              className="transition-colors hover:text-white"
+              onClick={closeMenu}
+              className="border-b border-zinc-900 py-4 text-sm text-zinc-400 transition-colors hover:text-white"
             >
               Register/Login
             </Link>
 
             <Link
-              href="/#partnership"
-              className="transition-colors hover:text-white"
+              href="#partnership"
+              onClick={closeMenu}
+              className="border-b border-zinc-900 py-4 text-sm text-zinc-400 transition-colors hover:text-white"
             >
               Partnership
             </Link>
 
             <Link
-              href="/#contact"
-              className="transition-colors hover:text-white"
+              href="#contact"
+              onClick={closeMenu}
+              className="py-4 text-sm text-zinc-400 transition-colors hover:text-white"
             >
               Contact
             </Link>
-          </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            type="button"
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-zinc-300 hover:text-white transition-colors"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isOpen}
-          >
-            {isOpen ? (
-              <X size={26} />
-            ) : (
-              <Menu size={26} />
-            )}
-          </button>
+          </nav>
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <nav className="md:hidden mt-4 border-t border-zinc-800 pt-4 pb-2">
-            <div className="flex flex-col gap-1">
-
-              <Link
-                href="/#about"
-                onClick={closeMenu}
-                className="px-3 py-3 text-sm text-zinc-400 rounded-lg transition-colors hover:bg-zinc-900 hover:text-white"
-              >
-                About Us
-              </Link>
-
-              <Link
-                href="/#services"
-                onClick={closeMenu}
-                className="px-3 py-3 text-sm text-zinc-400 rounded-lg transition-colors hover:bg-zinc-900 hover:text-white"
-              >
-                Services
-              </Link>
-
-              <Link
-                href="/register"
-                onClick={closeMenu}
-                className="px-3 py-3 text-sm text-zinc-400 rounded-lg transition-colors hover:bg-zinc-900 hover:text-white"
-              >
-                Register / Login
-              </Link>
-
-              <Link
-                href="/#partnership"
-                onClick={closeMenu}
-                className="px-3 py-3 text-sm text-zinc-400 rounded-lg transition-colors hover:bg-zinc-900 hover:text-white"
-              >
-                Partnership
-              </Link>
-
-              <Link
-                href="/#contact"
-                onClick={closeMenu}
-                className="px-3 py-3 text-sm text-zinc-400 rounded-lg transition-colors hover:bg-zinc-900 hover:text-white"
-              >
-                Contact
-              </Link>
-
-            </div>
-          </nav>
-        )}
-      </div>
+      )}
     </header>
   );
 }
