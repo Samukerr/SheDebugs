@@ -11,14 +11,14 @@ export default function LandingPage() {
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
           <div className="font-bold text-xl tracking-tight">SheDebugs</div>
           <div className="flex gap-4">
-          <nav className="hidden md:flex gap-6 text-sm text-zinc-400">
-            <a href ="#" className = "hover:text-flex-pink transition-colors">About Us</a>
-            <a href ="#" className = "hover:text-flex-pink transition-colors">Services</a>
-            <a href ="#" className = "hover:text-flex-pink transition-colors">Partnership</a>
-            <a href ="#" className = "hover:text-flex-pink transition-colors">Students and Graduates</a>
-            <a href ="/login" className = "hover:text-flex-pink transition-colors">Signin/Signup</a>
-            <a href ="#" className = "hover:text-flex-pink transition-colors">Contact Us</a>
-          </nav>
+            <nav className="hidden md:flex gap-6 text-sm text-zinc-400">
+          <a href ="#" className = "hover:text-flex-pink transition-colors">About Us</a>
+          <a href ="#" className = "hover:text-flex-pink transition-colors">Services</a>
+          <a href ="#" className = "hover:text-flex-pink transition-colors">Partnership</a>
+          <a href ="#" className = "hover:text-flex-pink transition-colors">Students and Graduates</a>
+          <a href ="/login" className = "hover:text-flex-pink transition-colors">Signin/Signup</a>
+          <a href ="#" className = "hover:text-flex-pink transition-colors">Contact Us</a>
+            </nav>
             <button className="text-zinc-400 hover:text-white"></button>
           </div>
         </div>
