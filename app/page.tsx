@@ -11,6 +11,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
           <div className="font-bold text-xl tracking-tight">SheDebugs</div>
           <div className="flex gap-4">
+            {/*desktop Navigation*/}
             <nav className="hidden md:flex gap-6 text-sm text-zinc-400">
           <a href ="#" className = "hover:text-flex-pink transition-colors">About Us</a>
           <a href ="#" className = "hover:text-flex-pink transition-colors">Services</a>
@@ -19,6 +20,27 @@ export default function LandingPage() {
           <a href ="/login" className = "hover:text-flex-pink transition-colors">Signin/Signup</a>
           <a href ="#" className = "hover:text-flex-pink transition-colors">Contact Us</a>
             </nav>
+            {/*mobile Navigation*/}
+            <details className ="relative md-hidden">
+            <summary className = "Flex cursor-pointer list-none items-center justify-center rounded-md p-2 text-zinc-400 hover:bg-zinc-900 hover:text-white" aria-label = "Open navigation Menu">
+              <svg xmlns = "http://www.w3.org/200/svg" width = "24" height ="24" viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" strokeWidth = "2" strokeLinecap = "round" strokeLinejoin = "round">
+                <line x1="4" x2="20" y1 ="6" y2 = "6"/>
+                <line x1="4" x2="20" y1 ="12" y2 = "12"/>
+                <line x1="4" x2="20" y1 ="18" y2 = "18"/> 
+              </svg>
+              </summary>
+              <div className = "absolute right-o top-14 w-64 rounded-xl border border-zinc-800 bg-zinc-950 p3 chadow-xl">
+                            <nav className="flex flex-col">
+                          <a href ="#" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">About Us</a>
+                          <a href ="#" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">Services</a>
+                          <a href ="#" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">Partnership</a>
+                          <a href ="#" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">Students and Graduates</a>
+                          <a href ="/login" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">Signin/Signup</a>
+                          <a href ="#" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">Contact Us</a>
+                            </nav>
+
+              </div>
+              </details> 
             <button className="text-zinc-400 hover:text-white"></button>
           </div>
         </div>
