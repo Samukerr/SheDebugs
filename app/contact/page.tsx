@@ -69,18 +69,12 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#09090B] text-white">
 
-      {/* ================================================= */}
-      {/* PAGE HEADER */}
-      {/* ================================================= */}
-
       <section className="relative overflow-hidden px-6 pb-16 pt-24 sm:px-10 lg:px-16">
 
-        {/* Pink Glow */}
         <div className="absolute left-1/2 top-0 z-0 h-72 w-72 -translate-x-1/2 rounded-full bg-pink-500/10 blur-3xl" />
 
         <div className="relative mx-auto max-w-6xl">
 
-          {/* Breadcrumb / Back */}
           <Link
             href="/"
             className="inline-flex items-center text-sm text-zinc-500 transition hover:text-pink-500"
@@ -88,7 +82,6 @@ export default function ContactPage() {
             ← Back to home
           </Link>
 
-          {/* Heading */}
           <div className="mt-10 max-w-3xl">
 
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#27272A] bg-[#111113] px-4 py-2 text-xs text-zinc-400">
@@ -122,23 +115,13 @@ export default function ContactPage() {
 
       </section>
 
-
-      {/* ================================================= */}
-      {/* CONTACT SECTION */}
-      {/* ================================================= */}
-
       <section className="px-6 pb-24 sm:px-10 lg:px-16">
 
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.8fr_1.2fr]">
 
 
-          {/* ================================================= */}
-          {/* LEFT — CONTACT INFORMATION */}
-          {/* ================================================= */}
-
           <div className="relative overflow-hidden rounded-3xl border border-[#27272A] bg-[#111113] p-8 sm:p-10">
 
-            {/* Decorative Glow */}
             <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-pink-500/10 blur-3xl" />
 
             <div className="relative">
@@ -154,8 +137,6 @@ export default function ContactPage() {
                 our team is here to help.
               </p>
 
-
-              {/* Contact Details */}
               <div className="mt-10 space-y-7">
 
                 {/* Email */}
@@ -177,8 +158,6 @@ export default function ContactPage() {
 
                 </div>
 
-
-                {/* Location */}
                 <div className="flex gap-4">
 
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#27272A] bg-[#09090B] text-pink-500">
@@ -238,11 +217,6 @@ export default function ContactPage() {
 
           </div>
 
-
-          {/* ================================================= */}
-          {/* RIGHT — CONTACT FORM */}
-          {/* ================================================= */}
-
           <div className="rounded-3xl border border-[#27272A] bg-[#111113] p-8 sm:p-10">
 
             <div className="mb-8">
@@ -259,7 +233,6 @@ export default function ContactPage() {
             </div>
 
 
-            {/* Success */}
             {success && (
               <div className="mb-6 rounded-xl border border-pink-500/20 bg-pink-500/10 px-4 py-3 text-sm text-pink-400">
                 {success}
@@ -280,11 +253,7 @@ export default function ContactPage() {
               onSubmit={handleSubmit}
               className="space-y-6"
             >
-
-              {/* Name + Email */}
               <div className="grid gap-6 sm:grid-cols-2">
-
-                {/* Name */}
                 <div>
 
                   <label
@@ -307,8 +276,6 @@ export default function ContactPage() {
 
                 </div>
 
-
-                {/* Email */}
                 <div>
 
                   <label
@@ -332,9 +299,6 @@ export default function ContactPage() {
                 </div>
 
               </div>
-
-
-              {/* Subject */}
               <div>
 
                 <label
@@ -357,8 +321,6 @@ export default function ContactPage() {
 
               </div>
 
-
-              {/* Message */}
               <div>
 
                 <label
@@ -381,8 +343,6 @@ export default function ContactPage() {
 
               </div>
 
-
-              {/* Submit */}
               <button
                 type="submit"
                 disabled={loading}
@@ -408,11 +368,6 @@ export default function ContactPage() {
         </div>
 
       </section>
-
-
-      {/* ================================================= */}
-      {/* BOTTOM CTA */}
-      {/* ================================================= */}
 
       <section className="border-t border-[#27272A] px-6 py-16 sm:px-10 lg:px-16">
 
