@@ -111,7 +111,7 @@ export default function LandingPage() {
             Learn More about SheDebugs <ArrowRight size={14} />
           </a>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-transparent bg-clip-text bg-linear-to-b from-white to-zinc-500">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-transparent bg-clip-text bg-linear-to-b from-pink-500/10 via-zinc-900 to-purple-500/10">
             Where Technology Meets Opportunity.
           </h1>
           
