@@ -3,7 +3,6 @@
 import { FormEvent, useState } from "react";
 import Link from "next/link";
 
-
 export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -68,7 +67,6 @@ export default function RegisterPage() {
       setEmail("");
       setPassword("");
       setConfirmPassword("");
-
     } catch (error) {
       console.error("Registration error:", error);
 
@@ -81,26 +79,24 @@ export default function RegisterPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#080808] px-4 py-8 text-white sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-[#09090B] px-4 py-8 text-white sm:px-6 lg:px-8">
 
       {/* Page Container */}
-      <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center">
+      <div className="flex min-h-calc(100vh-4rem) items-center justify-center">
 
         {/* Authentication Card */}
-        <div className="w-full max-w-5xl overflow-hidden rounded-3xl border border-[#242426] bg-[#111113] shadow-2xl">
+        <div className="w-full max-w-5xl overflow-hidden rounded-3xl border border-#27272A bg-[#111113] shadow-2xl">
 
-          <div className="grid min-h-[600px] md:grid-cols-2">
+          <div className="grid min-h-600px md:grid-cols-2">
 
-            {/* ================================================= */}
-            {/* LEFT SIDE — WELCOME / LOGIN */}
-            {/* ================================================= */}
 
-            <section className="relative hidden overflow-hidden bg-[#0d0d0f] md:flex">
 
-              {/* Decorative Glow */}
-              <div className="absolute -left-32 -top-32 h-80 w-80 rounded-full bg-[#00D084]/10 blur-3xl" />
+            <section className="relative hidden overflow-hidden bg-[#0D0D0F] md:flex">
 
-              <div className="absolute -bottom-32 -right-32 h-80 w-80 rounded-full bg-[#00D084]/5 blur-3xl" />
+              {/* Pink Decorative Glow */}
+              <div className="absolute -left-32 -top-32 h-80 w-80 rounded-full bg-pink-500/10 blur-3xl" />
+
+              <div className="absolute -bottom-32 -right-32 h-80 w-80 rounded-full bg-pink-500/5 blur-3xl" />
 
               {/* Content */}
               <div className="relative flex w-full items-center justify-center px-10 lg:px-16">
@@ -113,7 +109,7 @@ export default function RegisterPage() {
                     className="text-xl font-bold tracking-tight text-white"
                   >
                     She
-                    <span className="text-[#00D084]">
+                    <span className="text-pink-500">
                       Debugs
                     </span>
                   </Link>
@@ -122,28 +118,28 @@ export default function RegisterPage() {
                   <h1 className="mt-12 text-4xl font-bold leading-tight lg:text-5xl">
                     Welcome to
                     <br />
-                    <span className="text-[#00D084]">
+                    <span className="text-pink-500">
                       SheDebugs.
                     </span>
                   </h1>
 
-                  <p className="mt-6 text-sm leading-7 text-[#858585]">
+                  <p className="mt-6 text-sm leading-7 text-zinc-400">
                     Join a growing community connecting
                     talent, businesses and opportunities
                     through technology.
                   </p>
 
                   {/* Divider */}
-                  <div className="my-8 h-px w-full bg-[#242426]" />
+                  <div className="my-8 h-px w-full bg-[#27272A]" />
 
                   {/* Existing Account */}
-                  <p className="text-sm text-[#858585]">
+                  <p className="text-sm text-zinc-500">
                     Already have an account?
                   </p>
 
                   <Link
                     href="/login"
-                    className="mt-4 inline-flex items-center justify-center rounded-xl border border-[#3a3a3d] px-8 py-3 text-sm font-semibold text-white transition duration-200 hover:border-[#00D084] hover:bg-[#00D084] hover:text-black"
+                    className="mt-4 inline-flex items-center justify-center rounded-xl border border-zinc-700 px-8 py-3 text-sm font-semibold text-white transition duration-200 hover:border-pink-500 hover:bg-pink-500 hover:text-white"
                   >
                     Sign in
                   </Link>
@@ -153,7 +149,6 @@ export default function RegisterPage() {
               </div>
 
             </section>
-
 
             {/* ================================================= */}
             {/* RIGHT SIDE — REGISTER */}
@@ -170,7 +165,7 @@ export default function RegisterPage() {
                     className="text-xl font-bold tracking-tight text-white"
                   >
                     She
-                    <span className="text-[#00D084]">
+                    <span className="text-pink-500">
                       Debugs
                     </span>
                   </Link>
@@ -183,7 +178,7 @@ export default function RegisterPage() {
                     Create an account
                   </h2>
 
-                  <p className="mt-3 text-sm leading-6 text-[#929292]">
+                  <p className="mt-3 text-sm leading-6 text-zinc-400">
                     Create your SheDebugs account and
                     start connecting with opportunities.
                   </p>
@@ -199,7 +194,7 @@ export default function RegisterPage() {
 
                 {/* Success */}
                 {success && (
-                  <div className="mb-6 rounded-xl border border-[#00D084]/20 bg-[#00D084]/10 px-4 py-3 text-sm text-[#00D084]">
+                  <div className="mb-6 rounded-xl border border-pink-500/20 bg-pink-500/10 px-4 py-3 text-sm text-pink-400">
                     {success}
                   </div>
                 )}
@@ -214,7 +209,7 @@ export default function RegisterPage() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="mb-2 block text-sm font-medium text-gray-300"
+                      className="mb-2 block text-sm font-medium text-zinc-300"
                     >
                       Email
                     </label>
@@ -230,7 +225,7 @@ export default function RegisterPage() {
                         setEmail(event.target.value)
                       }
                       required
-                      className="w-full rounded-xl border border-[#29292c] bg-[#0b0b0c] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-[#666] focus:border-[#00D084] focus:ring-1 focus:ring-[#00D084]"
+                      className="w-full rounded-xl border border-[#27272A] bg-[#09090B] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-pink-500 focus:ring-1 focus:ring-pink-500"
                     />
                   </div>
 
@@ -238,7 +233,7 @@ export default function RegisterPage() {
                   <div>
                     <label
                       htmlFor="password"
-                      className="mb-2 block text-sm font-medium text-gray-300"
+                      className="mb-2 block text-sm font-medium text-zinc-300"
                     >
                       Password
                     </label>
@@ -254,10 +249,10 @@ export default function RegisterPage() {
                         setPassword(event.target.value)
                       }
                       required
-                      className="w-full rounded-xl border border-[#29292c] bg-[#0b0b0c] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-[#666] focus:border-[#00D084] focus:ring-1 focus:ring-[#00D084]"
+                      className="w-full rounded-xl border border-[#27272A] bg-[#09090B] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-pink-500 focus:ring-1 focus:ring-pink-500"
                     />
 
-                    <p className="mt-2 text-xs text-[#666]">
+                    <p className="mt-2 text-xs text-zinc-600">
                       Password must contain at least 8
                       characters.
                     </p>
@@ -267,7 +262,7 @@ export default function RegisterPage() {
                   <div>
                     <label
                       htmlFor="confirmPassword"
-                      className="mb-2 block text-sm font-medium text-gray-300"
+                      className="mb-2 block text-sm font-medium text-zinc-300"
                     >
                       Confirm password
                     </label>
@@ -283,7 +278,7 @@ export default function RegisterPage() {
                         setConfirmPassword(event.target.value)
                       }
                       required
-                      className="w-full rounded-xl border border-[#29292c] bg-[#0b0b0c] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-[#666] focus:border-[#00D084] focus:ring-1 focus:ring-[#00D084]"
+                      className="w-full rounded-xl border border-[#27272A] bg-[#09090B] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-pink-500 focus:ring-1 focus:ring-pink-500"
                     />
                   </div>
 
@@ -294,19 +289,19 @@ export default function RegisterPage() {
                       id="terms"
                       type="checkbox"
                       required
-                      className="mt-1 h-4 w-4 rounded border-[#333] bg-[#0b0b0c] accent-[#00D084]"
+                      className="mt-1 h-4 w-4 rounded border-zinc-700 bg-[#09090B] accent-pink-500"
                     />
 
                     <label
                       htmlFor="terms"
-                      className="text-xs leading-5 text-[#777]"
+                      className="text-xs leading-5 text-zinc-500"
                     >
                       I agree to the SheDebugs{" "}
-                      <span className="text-[#00D084]">
+                      <span className="text-pink-500">
                         Terms of Service
                       </span>{" "}
                       and{" "}
-                      <span className="text-[#00D084]">
+                      <span className="text-pink-500">
                         Privacy Policy
                       </span>
                       .
@@ -318,7 +313,7 @@ export default function RegisterPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full rounded-xl bg-[#00D084] px-6 py-3.5 text-sm font-semibold text-black transition duration-200 hover:bg-[#00b873] hover:shadow-[0_0_25px_rgba(0,208,132,0.18)] disabled:cursor-not-allowed disabled:opacity-50"
+                    className="w-full rounded-xl bg-pink-500 px-6 py-3.5 text-sm font-semibold text-white transition duration-200 hover:bg-pink-600 hover:shadow-[0_0_25px_rgba(236,72,153,0.18)] disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {loading
                       ? "Creating account..."
@@ -328,13 +323,13 @@ export default function RegisterPage() {
                 </form>
 
                 {/* Mobile Login */}
-                <div className="mt-8 text-center text-sm text-[#858585] md:hidden">
+                <div className="mt-8 text-center text-sm text-zinc-500 md:hidden">
 
                   Already have an account?{" "}
 
                   <Link
                     href="/login"
-                    className="font-medium text-[#00D084] hover:underline"
+                    className="font-medium text-pink-500 hover:text-pink-400 hover:underline"
                   >
                     Sign in
                   </Link>
