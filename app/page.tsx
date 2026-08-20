@@ -1,50 +1,149 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import { ArrowRight, Handshake, Code2, Rocket, GraduationCap } from 'lucide-react';
 
-
 export default function LandingPage() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50 font-poppins selection:bg-zinc-800">
       
       {/* Navbar */}
-      <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md">
-        <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="font-bold text-xl tracking-tight">SheDebugs</div>
-          <div className="flex gap-4">
-            {/*desktop Navigation*/}
-            <nav className="hidden md:flex gap-6 text-sm text-zinc-400">
-          <a href ="#" className = "hover:text-flex-pink transition-colors">About Us</a>
-          <a href ="#" className = "hover:text-flex-pink transition-colors">Services</a>
-          <a href ="#" className = "hover:text-flex-pink transition-colors">Partnership</a>
-          <a href ="#" className = "hover:text-flex-pink transition-colors">Students and Graduates</a>
-          <a href ="/login" className = "hover:text-flex-pink transition-colors">Signin/Signup</a>
-          <a href ="#" className = "hover:text-flex-pink transition-colors">Contact Us</a>
-            </nav>
-            {/*mobile Navigation*/}
-            <details className ="relative md-hidden">
-            <summary className = "Flex cursor-pointer list-none items-center justify-center rounded-md p-2 text-zinc-400 hover:bg-zinc-900 hover:text-white" aria-label = "Open navigation Menu">
-              <svg xmlns = "http://www.w3.org/200/svg" width = "24" height ="24" viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" strokeWidth = "2" strokeLinecap = "round" strokeLinejoin = "round">
-                <line x1="4" x2="20" y1 ="6" y2 = "6"/>
-                <line x1="4" x2="20" y1 ="12" y2 = "12"/>
-                <line x1="4" x2="20" y1 ="18" y2 = "18"/> 
-              </svg>
-              </summary>
-              <div className = "absolute right-o top-14 w-64 rounded-xl border border-zinc-800 bg-zinc-950 p3 chadow-xl">
-                            <nav className="flex flex-col">
-                          <a href ="#" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">About Us</a>
-                          <a href ="#" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">Services</a>
-                          <a href ="#" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">Partnership</a>
-                          <a href ="#" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">Students and Graduates</a>
-                          <a href ="/login" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">Signin/Signup</a>
-                          <a href ="#" className = "rounded-lg px-4 py-3 text-sm text-zinc-400 hover:bg-zinc-900 hover:text-white transtion-colors">Contact Us</a>
-                            </nav>
+<header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-md">
+  <div className="container mx-auto px-6 h-16 flex items-center justify-between">
 
-              </div>
-              </details> 
-            <button className="text-zinc-400 hover:text-white"></button>
-          </div>
-        </div>
-      </header>
+    {/* Logo */}
+    <div className="font-bold text-xl tracking-tight text-white">
+      SheDebugs
+    </div>
+
+    {/* Desktop Navigation */}
+    <nav className="hidden md:flex items-center gap-6 text-sm text-zinc-400">
+      <a
+        href="#about"
+        className="hover:text-white transition-colors"
+      >
+        About Us
+      </a>
+      <a
+        href="#services"
+        className="hover:text-pink-400 transition-colors"
+      >
+        Services
+      </a>
+      <a
+        href="#partnership"
+        className="hover:text-pink-400 transition-colors"
+      >
+        Partnership
+      </a>
+      <a
+        href="#students"
+        className="hover:text-pink-400 transition-colors"
+      >
+        Students and Graduates
+      </a>
+      <a
+        href="/login"
+        className="hover:text-pink-400 transition-colors"
+      >
+        Signin/Signup
+      </a>
+      <a
+        href="#contact"
+        className="hover:text-pink-400 transition-colors"
+      >
+        Contact Us
+      </a>
+    </nav>
+
+    {/* Mobile Hamburger */}
+    <button
+      type="button" 
+      onClick={() => {console.log ("Hamburger Clicked"); setMenuOpen((prev)=>!prev)}}
+      className="md:hidden relative z-[60] flex flex-col justify-center items-center w-10 h-10 text-zinc-300 hover:text-white"
+      aria-label="Toggle navigation menu"
+      aria-expanded={menuOpen}
+    >
+      <span
+        className={`block w-7 h-0.5 bg-current transition-all duration-300 ${
+          menuOpen ? "rotate-45 translate-y-1.5" : ""
+        }`}
+      />
+
+      <span
+        className={`block w-7 h-0.5 bg-current my-1.5 transition-all duration-300 ${
+          menuOpen ? "opacity-0" : ""
+        }`}
+      />
+
+      <span
+        className={`block w-7 h-0.5 bg-current transition-all duration-300 ${
+          menuOpen ? "-rotate-45 -translate-y-1.5" : ""
+        }`}
+      />
+    </button>
+  </div>
+
+  {/* Mobile Menu Overlay */}
+  {menuOpen && (
+    <>
+      {/* Dark overlay */}
+      <div
+        className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
+        onClick={() => setMenuOpen(false)}
+      />
+
+      {/* Mobile Menu Panel */}
+      <div className="fixed top-20 right-4 z-50 w-[calc(100%-2rem)] max-w-sm rounded-2xl border border-zinc-800 bg-zinc-950 shadow-2xl md:hidden overflow-hidden">
+        <nav className="flex flex-col py-4">
+          <a
+            href="#about"
+            onClick={() => setMenuOpen(false)}
+            className="px-6 py-4 text-lg text-zinc-300 hover:bg-zinc-900 hover:text-white transition-colors"
+          >
+            About Us
+          </a>
+          <a
+            href="#services"
+            onClick={() => setMenuOpen(false)}
+            className="px-6 py-4 text-lg text-zinc-300 hover:bg-zinc-900 hover:text-pink-400 transition-colors"
+          >
+            Services
+          </a>
+          <a
+            href="#partnership"
+            onClick={() => setMenuOpen(false)}
+            className="px-6 py-4 text-lg text-zinc-300 hover:bg-zinc-900 hover:text-pink-400 transition-colors"
+          >
+            Partnership
+          </a>
+          <a
+            href="#students"
+            onClick={() => setMenuOpen(false)}
+            className="px-6 py-4 text-lg text-zinc-300 hover:bg-zinc-900 hover:text-pink-400 transition-colors"
+          >
+            Students and Graduates
+          </a>
+          <a
+            href="/login"
+            onClick={() => setMenuOpen(false)}
+            className="px-6 py-4 text-lg text-zinc-300 hover:bg-zinc-900 hover:text-pink-400 transition-colors"
+          >
+            Signin/Signup
+          </a>
+          <a
+            href="#contact"
+            onClick={() => setMenuOpen(false)}
+            className="px-6 py-4 text-lg text-zinc-300 hover:bg-zinc-900 hover:text-pink-400 transition-colors"
+          >
+            Contact Us
+          </a>
+        </nav>
+      </div>
+    </>
+  )}
+</header>
 
       <main className="container mx-auto px-6">
         
