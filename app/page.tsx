@@ -20,7 +20,7 @@ export default function LandingPage() {
     <button
       type="button" 
       onClick={() => setMenuOpen((prev)=>!prev)}
-      className="relative z-[60] flex flex-col justify-center items-center w-10 h-10 text-zinc-300 hover:text-white"
+      className="relative z-60 flex flex-col justify-center items-center w-10 h-10 text-zinc-300 hover:text-white"
       aria-label="Toggle navigation menu"
       aria-expanded={menuOpen}
     >
