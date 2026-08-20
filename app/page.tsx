@@ -89,22 +89,7 @@ export default function AboutPage() {
                 Home
               </Link>
 
-              <Link
-                href="/"
-                onClick={() => setMenuOpen(false)}
-                className="px-6 py-4 text-lg text-white transition-colors hover:bg-zinc-900"
-              >
-                About Us
-              </Link>
-
-              <a
-                href="/#services"
-                onClick={() => setMenuOpen(false)}
-                className="px-6 py-4 text-lg text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-pink-400"
-              >
-                Services
-              </a>
-
+              
               <a
                 href="/#partnership"
                 onClick={() => setMenuOpen(false)}
