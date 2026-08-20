@@ -383,7 +383,7 @@ export default function ContactPage() {
           </h2>
 
           <Link
-            href="/about"
+            href="/"
             className="mt-6 inline-flex items-center rounded-xl border border-[#3a3a3d] px-7 py-3 text-sm font-semibold text-white transition hover:border-pink-500 hover:bg-pink-500"
           >
             Learn more about us
