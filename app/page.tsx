@@ -17,51 +17,10 @@ export default function LandingPage() {
       SheDebugs
     </div>
 
-    {/* Desktop Navigation */}
-    <nav className="hidden md:flex items-center gap-6 text-sm text-zinc-400">
-      <a
-        href="#about"
-        className="hover:text-white transition-colors"
-      >
-        About Us
-      </a>
-      <a
-        href="#services"
-        className="hover:text-pink-400 transition-colors"
-      >
-        Services
-      </a>
-      <a
-        href="#partnership"
-        className="hover:text-pink-400 transition-colors"
-      >
-        Partnership
-      </a>
-      <a
-        href="#students"
-        className="hover:text-pink-400 transition-colors"
-      >
-        Students and Graduates
-      </a>
-      <a
-        href="/login"
-        className="hover:text-pink-400 transition-colors"
-      >
-        Signin/Signup
-      </a>
-      <a
-        href="#contact"
-        className="hover:text-pink-400 transition-colors"
-      >
-        Contact Us
-      </a>
-    </nav>
-
-    {/* Mobile Hamburger */}
     <button
       type="button" 
-      onClick={() => {console.log ("Hamburger Clicked"); setMenuOpen((prev)=>!prev)}}
-      className="md:hidden relative z-[60] flex flex-col justify-center items-center w-10 h-10 text-zinc-300 hover:text-white"
+      onClick={() => setMenuOpen((prev)=>!prev)}
+      className="relative z-[60] flex flex-col justify-center items-center w-10 h-10 text-zinc-300 hover:text-white"
       aria-label="Toggle navigation menu"
       aria-expanded={menuOpen}
     >
@@ -85,17 +44,15 @@ export default function LandingPage() {
     </button>
   </div>
 
-  {/* Mobile Menu Overlay */}
   {menuOpen && (
     <>
-      {/* Dark overlay */}
+     
       <div
-        className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
+        className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
         onClick={() => setMenuOpen(false)}
       />
 
-      {/* Mobile Menu Panel */}
-      <div className="fixed top-20 right-4 z-50 w-[calc(100%-2rem)] max-w-sm rounded-2xl border border-zinc-800 bg-zinc-950 shadow-2xl md:hidden overflow-hidden">
+      <div className="fixed top-20 right-4 z-50 w-[calc(100%-2rem)] max-w-sm rounded-2xl border border-zinc-800 bg-zinc-950 shadow-2xl overflow-hidden">
         <nav className="flex flex-col py-4">
           <a
             href="#about"
