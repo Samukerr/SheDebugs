@@ -34,12 +34,6 @@ export default function AboutPage() {
           >
             She
           </Link>
-           <Link
-            href="/"
-            className="text-xl font-bold tracking-tight text-pink"
-          >
-            Debugs
-          </Link>
 
           {/* Hamburger */}
           <button
