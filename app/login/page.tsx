@@ -65,15 +65,15 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#080808] px-4 py-8 text-white sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-zinc-950 px-4 py-8 text-white sm:px-6 lg:px-8">
 
       {/* Page Container */}
       <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center">
 
         {/* Authentication Card */}
-        <div className="w-full max-w-5xl overflow-hidden rounded-3xl border border-[#242426] bg-[#111113] shadow-2xl">
+        <div className="w-full max-w-5xl overflow-hidden rounded-3xl border border-zinc-800 bg-[#111113] shadow-2xl">
 
-          <div className="grid min-h-[600px] md:grid-cols-2">
+          <div className="grid min-h-600px md:grid-cols-2">
 
             {/* ================================================= */}
             {/* LEFT SIDE — LOGIN */}
@@ -90,7 +90,7 @@ export default function LoginPage() {
                     className="text-xl font-bold tracking-tight text-white"
                   >
                     She
-                    <span className="text-[#00D084]">
+                    <span className="text-pink-500">
                       Debugs
                     </span>
                   </Link>
@@ -103,7 +103,7 @@ export default function LoginPage() {
                     Welcome back
                   </h1>
 
-                  <p className="mt-3 text-sm leading-6 text-[#929292]">
+                  <p className="mt-3 text-sm leading-6 text-zinc-400">
                     Sign in to your SheDebugs account.
                   </p>
 
@@ -126,7 +126,7 @@ export default function LoginPage() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="mb-2 block text-sm font-medium text-gray-300"
+                      className="mb-2 block text-sm font-medium text-zinc-300"
                     >
                       Email
                     </label>
@@ -142,24 +142,25 @@ export default function LoginPage() {
                         setEmail(event.target.value)
                       }
                       required
-                      className="w-full rounded-xl border border-[#29292c] bg-[#0b0b0c] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-[#666] focus:border-[#00D084] focus:ring-1 focus:ring-[#00D084]"
+                      className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-pink-500 focus:ring-1 focus:ring-pink-500"
                     />
                   </div>
 
                   {/* Password */}
                   <div>
+
                     <div className="mb-2 flex items-center justify-between">
 
                       <label
                         htmlFor="password"
-                        className="block text-sm font-medium text-gray-300"
+                        className="block text-sm font-medium text-zinc-300"
                       >
                         Password
                       </label>
 
                       <Link
                         href="/forgot-password"
-                        className="text-xs text-[#8d8d8d] transition hover:text-[#00D084]"
+                        className="text-xs text-zinc-500 transition hover:text-pink-400"
                       >
                         Forgot password?
                       </Link>
@@ -177,15 +178,16 @@ export default function LoginPage() {
                         setPassword(event.target.value)
                       }
                       required
-                      className="w-full rounded-xl border border-[#29292c] bg-[#0b0b0c] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-[#666] focus:border-[#00D084] focus:ring-1 focus:ring-[#00D084]"
+                      className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-pink-500 focus:ring-1 focus:ring-pink-500"
                     />
+
                   </div>
 
                   {/* Sign In Button */}
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full rounded-xl bg-[#00D084] px-6 py-3.5 text-sm font-semibold text-black transition duration-200 hover:bg-[#00b873] hover:shadow-[0_0_25px_rgba(0,208,132,0.18)] disabled:cursor-not-allowed disabled:opacity-50"
+                    className="w-full rounded-xl bg-pink-500 px-6 py-3.5 text-sm font-semibold text-white transition duration-200 hover:bg-pink-600 hover:shadow-[0_0_25px_rgba(236,72,153,0.25)] disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {loading ? "Signing in..." : "Sign In"}
                   </button>
@@ -193,13 +195,13 @@ export default function LoginPage() {
                 </form>
 
                 {/* Mobile Register Link */}
-                <div className="mt-8 text-center text-sm text-[#858585] md:hidden">
+                <div className="mt-8 text-center text-sm text-zinc-500 md:hidden">
 
                   Don't have an account?{" "}
 
                   <Link
                     href="/register"
-                    className="font-medium text-[#00D084] hover:underline"
+                    className="font-medium text-pink-500 hover:text-pink-400 hover:underline"
                   >
                     Sign up
                   </Link>
@@ -215,12 +217,12 @@ export default function LoginPage() {
             {/* RIGHT SIDE — SIGN UP */}
             {/* ================================================= */}
 
-            <section className="relative hidden overflow-hidden border-l border-[#242426] bg-[#0d0d0f] md:flex">
+            <section className="relative hidden overflow-hidden border-l border-zinc-800 bg-[#0d0d0f] md:flex">
 
-              {/* Decorative Glow */}
-              <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[#00D084]/10 blur-3xl" />
+              {/* Decorative Pink Glow */}
+              <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-pink-500/10 blur-3xl" />
 
-              <div className="absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-[#00D084]/5 blur-3xl" />
+              <div className="absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-pink-500/5 blur-3xl" />
 
               {/* Content */}
               <div className="relative flex w-full items-center justify-center px-10 lg:px-16">
@@ -228,9 +230,9 @@ export default function LoginPage() {
                 <div className="max-w-sm">
 
                   {/* Small Badge */}
-                  <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#242426] bg-[#151517] px-4 py-2 text-xs text-[#9b9b9b]">
+                  <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900 px-4 py-2 text-xs text-zinc-400">
 
-                    <span className="h-2 w-2 rounded-full bg-[#00D084] shadow-[0_0_8px_rgba(0,208,132,0.8)]" />
+                    <span className="h-2 w-2 rounded-full bg-pink-500 shadow-[0_0_8px_rgba(236,72,153,0.8)]" />
 
                     Join the SheDebugs community
 
@@ -245,14 +247,14 @@ export default function LoginPage() {
                     Connect.
                     <br />
 
-                    <span className="text-[#00D084]">
+                    <span className="text-pink-500">
                       Grow.
                     </span>
 
                   </h2>
 
                   {/* Description */}
-                  <p className="mt-6 max-w-sm text-sm leading-7 text-[#858585]">
+                  <p className="mt-6 max-w-sm text-sm leading-7 text-zinc-500">
 
                     Connect with opportunities, develop
                     digital solutions, and grow through
@@ -261,16 +263,16 @@ export default function LoginPage() {
                   </p>
 
                   {/* Divider */}
-                  <div className="my-8 h-px w-full bg-[#242426]" />
+                  <div className="my-8 h-px w-full bg-zinc-800" />
 
                   {/* Sign Up */}
-                  <p className="text-sm text-[#858585]">
+                  <p className="text-sm text-zinc-500">
                     Don't have an account?
                   </p>
 
                   <Link
                     href="/register"
-                    className="mt-4 inline-flex items-center justify-center rounded-xl border border-[#3a3a3d] bg-transparent px-8 py-3 text-sm font-semibold text-white transition duration-200 hover:border-[#00D084] hover:bg-[#00D084] hover:text-black"
+                    className="mt-4 inline-flex items-center justify-center rounded-xl border border-zinc-700 bg-transparent px-8 py-3 text-sm font-semibold text-white transition duration-200 hover:border-pink-500 hover:bg-pink-500 hover:text-white hover:shadow-[0_0_20px_rgba(236,72,153,0.2)]"
                   >
                     Create an account
                   </Link>
