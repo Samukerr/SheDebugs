@@ -115,7 +115,7 @@ export default function AboutPage() {
               </Link>
 
               <a
-                href="/#contact"
+                href="/contact" 
                 onClick={() => setMenuOpen(false)}
                 className="px-6 py-4 text-lg text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-pink-400"
               >
@@ -127,17 +127,10 @@ export default function AboutPage() {
         </>
       )}
 
-      {/* =========================
-          MAIN CONTENT
-      ========================== */}
       <main>
 
-        {/* =========================
-            HERO
-        ========================== */}
         <section className="relative overflow-hidden px-6 py-24 md:py-32">
 
-          {/* Background glow */}
           <div className="pointer-events-none absolute left-1/2 top-0 h-500px w-500px -translate-x-1/2 rounded-full bg-pink-500/10 blur-[120px]" />
 
           <div className="relative mx-auto max-w-5xl text-center">
@@ -181,9 +174,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* =========================
-            WHO WE ARE
-        ========================== */}
         <section
           id="who-we-are"
           className="border-t border-zinc-900 px-6 py-20 md:py-28"
@@ -223,9 +213,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* =========================
-            MISSION & VISION
-        ========================== */}
         <section className="px-6 py-20 md:py-28">
 
           <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
@@ -255,7 +242,6 @@ export default function AboutPage() {
 
             </div>
 
-            {/* Vision */}
             <div className="group rounded-3xl border border-zinc-800 bg-zinc-900/40 p-8 transition hover:border-purple-500/40 md:p-10">
 
               <div className="mb-7 flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-500/10 text-purple-400">
@@ -282,9 +268,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* =========================
-            WHAT WE DO
-        ========================== */}
         <section
           id="what-we-do"
           className="border-y border-zinc-900 bg-zinc-900/20 px-6 py-20 md:py-28"
