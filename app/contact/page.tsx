@@ -139,7 +139,6 @@ export default function ContactPage() {
 
               <div className="mt-10 space-y-7">
 
-                {/* Email */}
                 <div className="flex gap-4">
 
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#27272A] bg-[#09090B] text-pink-500">
@@ -152,7 +151,7 @@ export default function ContactPage() {
                     </p>
 
                     <p className="mt-1 text-sm text-zinc-300">
-                      hello@shedebugs.co.za
+                      techiniquesbyher@gmail.com
                     </p>
                   </div>
 
@@ -170,14 +169,12 @@ export default function ContactPage() {
                     </p>
 
                     <p className="mt-1 text-sm text-zinc-300">
-                      South Africa
+                      Boksburg, Gauteng, South Africa 1459
                     </p>
                   </div>
 
                 </div>
 
-
-                {/* Response */}
                 <div className="flex gap-4">
 
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#27272A] bg-[#09090B] text-pink-500">
