@@ -1,6 +1,7 @@
 "use client"
+
 import React, {useState} from "react";
 
-export default function GraduatesPage() {
+export default function LandingPage() {
 
 }
