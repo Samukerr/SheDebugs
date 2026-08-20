@@ -32,7 +32,7 @@ export default function AboutPage() {
             href="/"
             className="text-xl font-bold tracking-tight text-white"
           >
-            She
+            SheDebugs
           </Link>
 
           {/* Hamburger */}
