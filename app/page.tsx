@@ -55,7 +55,7 @@ export default function LandingPage() {
       <div className="fixed top-20 right-4 z-50 w-[calc(100%-2rem)] max-w-sm rounded-2xl border border-zinc-800 bg-zinc-950 shadow-2xl overflow-hidden">
         <nav className="flex flex-col py-4">
           <a
-            href="#about"
+            href="/about"
             onClick={() => setMenuOpen(false)}
             className="px-6 py-4 text-lg text-zinc-300 hover:bg-zinc-900 hover:text-white transition-colors"
           >
@@ -125,6 +125,9 @@ export default function LandingPage() {
             </button>
             <button className="px-8 py-3 rounded-md bg-zinc-900 border border-zinc-800 text-white font-medium hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2">
                Become a Partner
+            </button>
+            <button className="px-8 py-3 rounded-md bg-white text-zinc-950 font-medium hover:bg-zinc-200 transition-colors">
+              I'm a Student
             </button>
           </div>
         </section>
