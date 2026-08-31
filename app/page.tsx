@@ -21,13 +21,8 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50 font-poppins">
 
-      {/* =========================
-          NAVBAR
-      ========================== */}
       <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-md">
         <div className="container mx-auto flex h-16 items-center justify-between px-6">
-
-          {/* Logo */}
           <Link
             href="/"
             className="text-xl font-bold tracking-tight text-white"
@@ -35,7 +30,6 @@ export default function AboutPage() {
             SheDebugs
           </Link>
 
-          {/* Hamburger */}
           <button
             type="button"
             onClick={() => setMenuOpen((prev) => !prev)}
@@ -66,9 +60,6 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* =========================
-          NAVIGATION OVERLAY
-      ========================== */}
       {menuOpen && (
         <>
           {/* Background overlay */}
@@ -293,7 +284,6 @@ export default function AboutPage() {
 
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 
-              {/* Card 1 */}
               <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-7 transition hover:-translate-y-1 hover:border-pink-500/40">
 
                 <Code2 className="mb-6 text-pink-400" size={30} />
@@ -309,7 +299,6 @@ export default function AboutPage() {
 
               </div>
 
-              {/* Card 2 */}
               <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-7 transition hover:-translate-y-1 hover:border-purple-500/40">
 
                 <GraduationCap className="mb-6 text-purple-400" size={30} />
@@ -325,7 +314,6 @@ export default function AboutPage() {
 
               </div>
 
-              {/* Card 3 */}
               <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-7 transition hover:-translate-y-1 hover:border-pink-500/40">
 
                 <Users className="mb-6 text-pink-400" size={30} />
@@ -341,7 +329,6 @@ export default function AboutPage() {
 
               </div>
 
-              {/* Card 4 */}
               <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-7 transition hover:-translate-y-1 hover:border-purple-500/40">
 
                 <Handshake className="mb-6 text-purple-400" size={30} />
@@ -361,9 +348,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* =========================
-            WHY SHEDEBUGS
-        ========================== */}
         <section className="px-6 py-20 md:py-28">
 
           <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:items-center">
@@ -445,9 +429,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* =========================
-            VALUES
-        ========================== */}
         <section className="border-t border-zinc-900 px-6 py-20 md:py-28">
 
           <div className="mx-auto max-w-6xl">
@@ -560,9 +541,6 @@ export default function AboutPage() {
 
       </main>
 
-      {/* =========================
-          FOOTER
-      ========================== */}
       <footer className="border-t border-zinc-900 px-6 py-8">
 
         <div className="mx-auto flex max-w-6xl flex-col gap-4 text-sm text-zinc-500 md:flex-row md:items-center md:justify-between">
