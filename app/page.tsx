@@ -82,7 +82,7 @@ export default function AboutPage() {
 
               
               <a
-                href="/#partnership"
+                href="/Partnership"
                 onClick={() => setMenuOpen(false)}
                 className="px-6 py-4 text-lg text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-pink-400"
               >
@@ -90,11 +90,11 @@ export default function AboutPage() {
               </a>
 
               <a
-                href="/#students"
+                href="/Talent"
                 onClick={() => setMenuOpen(false)}
                 className="px-6 py-4 text-lg text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-pink-400"
               >
-                Students and Graduates
+                Talent
               </a>
 
               <Link
