@@ -151,7 +151,7 @@ export default function ContactPage() {
                     </p>
 
                     <p className="mt-1 text-sm text-zinc-300">
-                      techiniquesbyher@gmail.com
+                      shedebugs.29@gmail.com
                     </p>
                   </div>
 
@@ -195,10 +195,8 @@ export default function ContactPage() {
 
               </div>
 
-
               {/* Divider */}
               <div className="my-10 h-px bg-[#27272A]" />
-
 
               {/* Closing */}
               <p className="text-sm leading-6 text-zinc-500">
